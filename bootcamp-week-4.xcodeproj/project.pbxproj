@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		E548FAF92964A6040015C429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FAF82964A6040015C429 /* AppDelegate.swift */; };
 		E548FAFB2964A6040015C429 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FAFA2964A6040015C429 /* SceneDelegate.swift */; };
-		E548FAFD2964A6040015C429 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FAFC2964A6040015C429 /* ViewController.swift */; };
+		E548FAFD2964A6040015C429 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FAFC2964A6040015C429 /* CitiesViewController.swift */; };
 		E548FB002964A6040015C429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E548FAFE2964A6040015C429 /* Main.storyboard */; };
 		E548FB022964A6050015C429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E548FB012964A6050015C429 /* Assets.xcassets */; };
 		E548FB052964A6050015C429 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E548FB032964A6050015C429 /* LaunchScreen.storyboard */; };
+		E548FB0F2964ACAB0015C429 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FB0E2964ACAB0015C429 /* CustomTableViewCell.swift */; };
+		E548FB112964B2440015C429 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FB102964B2440015C429 /* WeatherManager.swift */; };
+		E548FB152964B6200015C429 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548FB142964B6200015C429 /* WeatherViewController.swift */; };
+		E5C5702C29658F7F00577C35 /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C5702B29658F7F00577C35 /* CityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E548FAF52964A6040015C429 /* bootcamp-week-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bootcamp-week-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E548FAF82964A6040015C429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E548FAFA2964A6040015C429 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E548FAFC2964A6040015C429 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E548FAFC2964A6040015C429 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		E548FAFF2964A6040015C429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E548FB012964A6050015C429 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E548FB042964A6050015C429 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E548FB062964A6050015C429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E548FB0E2964ACAB0015C429 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E548FB102964B2440015C429 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		E548FB142964B6200015C429 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		E5C5702B29658F7F00577C35 /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		E548FAF72964A6040015C429 /* bootcamp-week-4 */ = {
 			isa = PBXGroup;
 			children = (
+				E577C7122966CC2B00616927 /* Models */,
+				E577C7112966CC1E00616927 /* Controllers */,
 				E548FAF82964A6040015C429 /* AppDelegate.swift */,
 				E548FAFA2964A6040015C429 /* SceneDelegate.swift */,
-				E548FAFC2964A6040015C429 /* ViewController.swift */,
+				E548FB0E2964ACAB0015C429 /* CustomTableViewCell.swift */,
 				E548FAFE2964A6040015C429 /* Main.storyboard */,
 				E548FB012964A6050015C429 /* Assets.xcassets */,
 				E548FB032964A6050015C429 /* LaunchScreen.storyboard */,
 				E548FB062964A6050015C429 /* Info.plist */,
 			);
 			path = "bootcamp-week-4";
+			sourceTree = "<group>";
+		};
+		E577C7112966CC1E00616927 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E548FAFC2964A6040015C429 /* CitiesViewController.swift */,
+				E548FB142964B6200015C429 /* WeatherViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E577C7122966CC2B00616927 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5C5702B29658F7F00577C35 /* CityManager.swift */,
+				E548FB102964B2440015C429 /* WeatherManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E548FAFD2964A6040015C429 /* ViewController.swift in Sources */,
+				E548FAFD2964A6040015C429 /* CitiesViewController.swift in Sources */,
+				E548FB152964B6200015C429 /* WeatherViewController.swift in Sources */,
 				E548FAF92964A6040015C429 /* AppDelegate.swift in Sources */,
+				E548FB112964B2440015C429 /* WeatherManager.swift in Sources */,
+				E548FB0F2964ACAB0015C429 /* CustomTableViewCell.swift in Sources */,
+				E5C5702C29658F7F00577C35 /* CityManager.swift in Sources */,
 				E548FAFB2964A6040015C429 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SN3GHS2A4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bootcamp-week-4/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SN3GHS2A4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "bootcamp-week-4/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
