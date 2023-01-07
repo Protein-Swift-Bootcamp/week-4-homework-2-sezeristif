@@ -9,6 +9,7 @@ import UIKit
 
 class CitiesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var cities: Array<CityObject> = []
     var cityManager = CityManager()
@@ -19,6 +20,7 @@ class CitiesViewController: UIViewController {
         cityManager.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(.init(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         cityManager.fetchCities()
     }
 }
@@ -40,6 +42,10 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
         showVC.cityName = cities[indexPath.row].name
         self.present(showVC, animated:true, completion:nil)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }
 
 extension CitiesViewController: CityManagerDelegate {
@@ -47,6 +53,8 @@ extension CitiesViewController: CityManagerDelegate {
         DispatchQueue.main.async {
             self.cities = cities
             self.tableView.reloadData()
+            self.activityIndicator.isHidden = true
+            self.tableView.isHidden = false
         }
     }
     

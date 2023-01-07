@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-WI-PCc" customClass="TableView">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-WI-PCc" customClass="TableView">
                                 <rect key="frame" x="0.0" y="112" width="393" height="675"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,21 +50,26 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cellContent" destination="g82-He-dHQ" id="IJO-8W-tH7"/>
                                             <outlet property="cellLabel" destination="Gpv-kU-h8E" id="4xk-0X-Q4M"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rPb-nT-xWA">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rPb-nT-xWA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8LZ-nO-BLu"/>
                             <constraint firstItem="L8b-mG-9KC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ec5-0S-pF2"/>
+                            <constraint firstItem="rPb-nT-xWA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pm5-9Q-uPK"/>
                             <constraint firstItem="L8b-mG-9KC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zqi-mV-iPH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="rPb-nT-xWA" id="QKZ-VA-Sfe"/>
                         <outlet property="tableView" destination="3tf-WI-PCc" id="kPR-jh-eL0"/>
                     </connections>
                 </viewController>
@@ -80,7 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsScale="YES" id="TAz-WV-ARU">
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsScale="YES" id="TAz-WV-ARU">
                                 <rect key="frame" x="0.0" y="59" width="393" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
